@@ -1,0 +1,43 @@
+.workers-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.workers-container > .main-title-cta {
+    padding: 24px !important
+}
+
+.workers-list-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.table-container {
+    height: 100%;
+    overflow: auto;
+}
+.workers-datagrid {
+    flex: 1;
+    overflow: auto;
+}
+
+.mantine-Table-root {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed; /* Ensures columns are fixed width */
+}
+
+.mantine-Table-th,
+.mantine-Table-td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Limit column width */
+.table-header-name {
+    max-width: 150px;
+}

@@ -1,0 +1,219 @@
+.budget-chatbot-button {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+  }
+  
+  .budget-chatbot-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .budget-chatbot-icon:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .budget-chatbot-window {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 380px;
+    height: 500px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  /* Animation classes */
+  .budget-chatbot-container {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+  
+  .budget-chatbot-window.entering {
+    /* Quick acceleration at start, then gentle deceleration */
+    animation: slideIn 0.25s cubic-bezier(0.05, 0.7, 0.1, 1.0) forwards;
+  }
+  
+  .budget-chatbot-window.exiting {
+    /* Gentle acceleration, then quick deceleration */
+    animation: slideOut 0.25s cubic-bezier(1.0, 0.1, 0.7, 0.05) forwards;
+  }
+  
+  .budget-chatbot-header {
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .budget-chatbot-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+  }
+  
+  .budget-chatbot-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .budget-chatbot-close:hover {
+    color: #374151;
+  }
+  
+  .budget-chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+  }
+  
+  .budget-chatbot-message {
+    margin-bottom: 16px;
+    display: flex;
+  }
+  
+  .budget-chatbot-message.user {
+    justify-content: flex-end;
+  }
+  
+  .budget-chatbot-message.bot {
+    justify-content: flex-start;
+  }
+  
+  .budget-chatbot-bubble {
+    max-width: 80%;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  
+  .budget-chatbot-bubble.user {
+    background-color: #f3f4f6;
+    color: #1f2937;
+  }
+  
+  .budget-chatbot-bubble.bot {
+    background-color: #dbeafe;
+    color: #1e40af;
+  }
+  
+  .budget-chatbot-budget-info {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #4b5563;
+  }
+  
+  .budget-chatbot-budget-item {
+    margin: 2px 0;
+  }
+  
+  .budget-chatbot-input-area {
+    padding: 16px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .budget-chatbot-form {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .budget-chatbot-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .budget-chatbot-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+  }
+  
+  .budget-chatbot-send {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .budget-chatbot-send:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Animation classes */
+  .budget-chatbot-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .budget-chatbot-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 400ms, transform 400ms;
+  }
+  
+  .budget-chatbot-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .budget-chatbot-exit-active {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 400ms, transform 400ms;
+  }

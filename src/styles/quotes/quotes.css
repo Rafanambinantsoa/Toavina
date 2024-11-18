@@ -1,0 +1,17 @@
+.quotes-page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.quotes-list-table-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.quotes-datagrid {
+    flex: 1;
+    overflow: auto;
+}
